@@ -1,0 +1,15 @@
+<div class="container">
+<h1>Inicio</h1>
+
+<a href="/create">Crear</a>
+
+<ul class="container-md">
+	{{#each results}}
+		<li class="row">
+            <a class="col-lg-3" href="/show/{{id}}">{{title}}</a>
+            <a class="col-sm-1  btn btn-primary" href="/edit/{{id}}">Edit</a>
+            <a class="col-sm-1  btn btn-danger"href="/delete/{{id}}">Delete</a>
+		</li>
+	{{/each}}
+</ul>
+</div>
