@@ -1,20 +1,22 @@
 <h2>Log in</h2>
-{{#if message.error}}
-<p class="alert alert-danger">{{ message.error }}</p>
+
+<span>{{messages.error}}</span>
+{{#if messages.error }}
+<p class="alert alert-danger">{{ messages.error }}</p>
 {{/if}}
 
 <div class="row mt-3">
 	<div class="col-6 mx-auto">
-		<form action="/login" method="POST">
+		<form action="/login" method="post">
 			<div class="form-group">
 				<label for="email">Email:</label>
-				<input class="form-control" type="text" type="email" name="email" id="email" />
+				<input class="form-control" type="email" name="email" id="email" />
 			</div>
 			<div class="form-group">
-				<label for="password"></label>
+				<label for="password">Password:</label>
 				<input class="form-control" type="password" name="password" id="password" />
 			</div>
-			<div >
+			<div>
 				<input class="btn btn-primary" type="submit" />
 			</div>
 		</form>

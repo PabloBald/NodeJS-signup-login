@@ -10,7 +10,7 @@ console.log(process.env.PORT)
 app.use(flash())
 app.use(
 	session({
-		secret: "Secret",
+		secret: process.env.SECRET,
 		resave: false,
 		saveUninitialized: true,
 		cookie: {
